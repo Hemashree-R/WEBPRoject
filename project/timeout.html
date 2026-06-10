@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr code generator</title>
+    <link rel="stylesheet" href="timeout.css">
+</head>
+<body>
+    <div id="container">
+         <div id="nav">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="eatfit.html">eatfit app</a>
+            <a href="timeout.html">qr code</a>
+            <a href="bank.html">Banking App</a>
+            <a href="rpc.html">game</a>
+            <a href="contact.html">contact</a>
+        </div>
+        <div id="box">
+            <div id="inputDiv">
+                <input type="text" id="input" placeholder="Enter the input">
+                <button id="submit">Submit</button>
+            </div>
+            <div id="imgDiv">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" alt="QR Loading...." id="qrCode">
+            </div>
+        </div>
+        <div id="emp">
+            
+        </div>
+    </div>
+</body>
+<script src="timeout.js"></script>
+</html>

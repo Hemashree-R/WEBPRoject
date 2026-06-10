@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Vidyalaya AMS - Admission Management System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f0f3f8;
+  --surf:#ffffff;
+  --card:#ffffff;
+  --card2:#f5f7fb;
+
+  --bdr:#c8d4e8;
+  --bdr2:#b0c0d8;
+
+  --a:#1a3a6b;
+  --a2:#c9a227;
+  --a3:#1a5c3a;
+
+  --err:#c0392b;
+  --warn:#b45309;
+
+  --txt:#0f1f3d;
+  --sub:#3d5070;
+  --mut:#8096b8;
+
+  --fh:'Syne',sans-serif;
+  --fb:'DM Sans',sans-serif;
+  --fm:'JetBrains Mono',monospace;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:var(--fb);
+  background:#eef1f8;
+  color:var(--txt);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:none;
+  z-index:0;
+}
+
+::-webkit-scrollbar{
+  width:4px;
+  height:4px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#b0c0d8;
+  border-radius:2px;
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1}
+  50%{opacity:.3}
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(16px)
+  }
+  to{
+    opacity:1;
+    transform:none
+  }
+}
+
+@keyframes notifIn{
+  from{
+    opacity:0;
+    transform:translateX(20px)
+  }
+  to{
+    opacity:1;
+    transform:none
+  }
+}
+
+/* LOGIN - Formal Centered Design */
+
+#lp{
+  position:fixed;
+  inset:0;
+  z-index:900;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#1a3a6b;
+  background-image:
+    linear-gradient(rgba(201,162,39,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,162,39,.06) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+
+#lp::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(
+      ellipse 60% 60% at 50% 40%,
+      rgba(201,162,39,.12) 0%,
+      transparent 70%
+    );
+  pointer-events:none;
+}
+
+#lp::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:url(data:image/png;base64,...);
+  opacity:.07;
+  pointer-events:none;
+  z-index:0;
+}
+
+.ll{
+  display:none;
+}
+
+.lr{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:100%;
+  padding:24px;
+  position:relative;
+  z-index:1;
+}
+
+/* Institution header above card */
+
+.inst{
+  text-align:center;
+  margin-bottom:28px;
+}
+
+.inst-logo{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:80px;
+  height:80px;
+  background:#fff;
+  border:2px solid #c9a227;
+  border-radius:50%;
+  box-shadow:0 4px 20px rgba(201,162,39,.25);
+  font-size:28px;
+  margin-bottom:14px;
+  overflow:hidden;
+  padding:4px;
+}
+
+.inst-name{
+  font-family:var(--fh);
+  font-size:22px;
+  font-weight:800;
+  color:#ffffff;
+  letter-spacing:-.3px;
+  margin-bottom:4px;
+}
+
+.inst-sub{
+  font-size:12.5px;
+  color:rgba(201,162,39,.9);
+  letter-spacing:.3px;
+}
